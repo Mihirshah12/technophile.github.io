@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-family: "Times New Roman";
+	font-size: 10px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.loginbar {
+ background-color: lightgrey;	
+}
+
+input[type=text] {
+    width: 130px;
+	height: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: white;
+    background-image: url('C:\website\img\logo.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="loginbar">
+	<table width = "100%">
+		<tr  >
+			<td width = "30%">Call us on +91 9619493023</td>
+			<td width = "70%">We currently deliver within Mumbai city limits.</td>
+			<td> <a href="C:\website\Login.HTML">Login</a></td>
+		</tr>
+	</table>
+</div>
+
+<table>
+<tr>
+<td width="30%">
+	<div>
+		<img src="C:\website\img\logo.png" alt="Logo" style="width:50%;height:50%;">
+	</div>
+</td>
+
+<td style="vertical-align:bottom">
+	<form>
+		<input type="text" name="search" placeholder="Search..">
+	</form>
+
+</td>
+
+<td width = "5%">
+	<img src="C:\website\img\facebook.png" alt="favebook" style="width:30%;height:6%;">
+	<img src="C:\website\img\insta.jpg" alt="instagram" style="width:40%;height:12%;">
+<td>
+
+<td width = "5%">
+	
+</td>
+	
+</tr>
+
+</table>
+
+
+
+
+<ul>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">TRAVEL AND CAMERAS</a>
+    <div class="dropdown-content">
+      <a href="C:\website\DSLR.HTML" target = "iframe_body">DSLR CAMERAS</a>
+      <a href="C:\website\GoPro.HTML">GOPRO</a>
+      <a href="C:\website\Polaroid.HTML">POLAROID</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">AV AND MEDIA</a>
+    <div class="dropdown-content">
+      <a href="C:\website\projectors.HTML">PROJECTORS</a>
+      <a href="C:\website\speakers.HTML">SPEAKERS</a>
+    </div>
+  </li>
+  
+  
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">PARTY AND GAMES</a>
+    <div class="dropdown-content">
+      <a href="C:\website\boardgames.HTML">BOARD GAMES</a>
+      <a href="C:\website\karaoke.HTML">KARAOKE</a>
+    </div>
+  </li>
+  
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">HOVERBOARD</a>
+    <div class="dropdown-content">
+      <a href="C:\website\hoverboard.HTML">HOVERBOARD</a>
+    </div>
+  </li>
+  
+</ul>
+
+</body>
+</html>

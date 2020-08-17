@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<style>
+			*
+			{
+				margin: 0;
+				padding: 0;
+			}
+				
+			body, html
+			{	
+				height: 100%;
+				width: 100%;
+			}
+		
+			div
+			{
+				width: 100%;
+			}
+			
+			#head
+			{
+				height: 20%;								
+				background-color: red;	
+			}
+
+			#body1, #body2
+			{
+				height: 150%;
+				background-color : blue;
+			}
+
+			#body2
+			{
+				display: none;
+				background-color: yellow;
+			}
+
+			#foot
+			{
+				height: 20%;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+
+	<div id = "head"></div>
+	<div id = "body1"></div>
+	<div id = "body2"></div>
+	<div id = "foot"></div>
+
+	<script>
+		document.getElementById('head').onclick = redirect;
+
+		function redirect()
+		{
+			document.getElementById('body1').style.display = "none";
+			document.getElementById('body2').style.display = "block";			
+		}	
+
+
+	</script>
+	</body>
+</html>

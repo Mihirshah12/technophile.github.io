@@ -1,0 +1,879 @@
+<html>
+
+<head>
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-family: "Times New Roman";
+	font-size: 12px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+input[type=text] {
+    width: 70%;
+	height: 50px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    font-size: 18px;
+    background-color: white;
+    background-image: url('C:\\website\\img\\search.png');
+    //background-position: 20px 10px; 
+    background-repeat: no-repeat;
+    padding: 15px 40px 20px 80px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 80%;
+}
+
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  max-height: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.product-content{
+background-color: #D4E0E7;
+}
+
+ th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.loginbar {
+ background-color:#F0F3F4;
+ font-family: "Times New Roman";
+ font-size: 12px;
+ text-decoration: none;
+}
+
+.textStyle{
+	color:blue;
+}
+
+
+.navbar {
+ background-color: #D4E0E7;	
+}
+
+</style>
+</head>
+
+<body onload="javascript:hideAllDiv();>
+<div class = "header">
+	<div class="loginbar">
+	<table width = "100%">
+		<tr class="textStyle">
+			<td width = "20%" align="center"><a href="fontt.html">About us</a></td>
+			<td width = "70%" align="center">We currently deliver within Mumbai city limits.</td>
+			<td align="left"> <a href="Login.html">Logout</a></td>
+	
+						<td align ="left"><a href="feedback.html">Feedback</a></td>
+
+		</tr>
+	</table>
+	</div>
+
+	<table width = "100%">
+	<tr>
+		<td width="30%">
+			<div><img src="img\klc.png" alt="Logo" style="width:45%;height:35%;"></div>
+		</td>
+
+	<td>
+		<form>
+			<input type="text" name="search" placeholder="Search..">
+		</form>
+	</td>
+
+	<td width = "10%">
+		<a href = "https://www.facebook.com/Techophilerental/"> <img src="img\facebook.png" alt="facebook" style="width:40%;height: 50px;"></a>
+		<a href = "https://www.instagram.com/techophile_rental/"><img src="img\insta.jpg" alt="instagram" style="width:50%;;"></a>
+	</td>
+
+	
+</tr>
+
+</table>
+
+<ul>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">TRAVEL AND CAMERAS</a>
+    <div class="dropdown-content">
+      <a href="" onClick="return display('DSLR');">DSLR CAMERAS</a>
+      <a href="" onClick="return display('GOPRO');">GOPRO</a>
+      <a href="" onClick="return display('POLAROID');">POLAROID</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">AV AND MEDIA</a>
+    <div class="dropdown-content">
+      <a href="" onClick="return display('PROJECTORS');">PROJECTORS</a>
+      <a href="" onClick="return display('SPEAKERS');">SPEAKERS</a>
+    </div>
+  </li>
+  
+  
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">PARTY AND GAMES</a>
+    <div class="dropdown-content">
+      <a href="" onClick="return display('BOARDGAME');">BOARD GAMES</a>
+      <a href="" onClick="return display('KARAOKE');">KARAOKE</a>
+    </div>
+  </li>
+  
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">HOVERBOARD</a>
+    <div class="dropdown-content">
+      <a href="" onClick="return display('HOVERBOARD');">HOVERBOARD</a>
+    </div>
+  </li>
+  
+</ul>
+</div>
+
+<div id = "mainPage">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img\mainpage\img1.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img\mainpage\img2.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img\mainpage\img3.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+</div>
+</div>
+
+<div id = "DSLR">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href="" onClick="return display('mainPage');">Home</a>>><a href="" onClick="return display('mainPage');">Travel And Cameras</a>>>DSLR</td>
+		</tr>
+	</table>
+</div>
+
+
+<table class = "product-content" width = "100%">
+<tr>
+	<td width = "30%"> 
+		<img src="Img\DSLR\img1.png"style="width:304px;height:228px;">
+	</td>
+	<td>
+
+		<h1>NIKON DSLR D3300</h1>
+<pre><strong>
+ Looking for a DSLR camera on rent in Mumbai? The Nikon D3300 is one of the best entry-level DSLR cameras available. 
+ With stunning image quality, exceptional sharpness and ease of use, this lightweight and compact camera is perfect for any situation.
+
+ What you get :1) Camera,2) Standard Lens,3)32GB Memory card,4)Battery+Charger,5)Carry Case
+
+ This camera with standard lens costs over Rs. 33,000/- and the extra zoom lens comes for another Rs. 9,000/-. 
+ But you get this full kit for as little as:
+
+ Rs. 1,100 minimum rental up to 48 hour
+ Rs. 2,500 for a week
+ Rs. 4,700 for 2 weeks
+ Rs. 7,000 for a month
+
+
+ Refundable deposit: Rs. 3,000 only. 
+ All prices are inclusive of delivery and prorated for the exact amount of days you rent
+
+</strong></pre>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="Img\DSLR\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+   <h1>The Canon 5D Mark IV</h1>
+   <pre><strong>
+ The Canon 5D Mark IV is the latest iteration of Canon's much loved 5D series,
+ which is a favorite for professionals and serious enthusiasts alike. 
+ Succeeding the critically acclaimed 5D Mark 3, it has lived up to its lineage. 
+ With a full-frame 30.4 Megapixel sensor, this camera is suited to almost any environment and use case possible. 
+ If you want to rent the Canon 5D in Mumbai, you've come to the right place. 
+ The camera retails for over Rs. 250,000. But you can get it for as little as:
+
+ Rs. 2,500 minimum rental up to 24 hours
+ Rs. 4,000 minimum rental up to 48 hours
+ Rs. 10,000 for a week
+
+
+ Refundable deposit: Rs. 5,000 only. 
+ All prices are inclusive of delivery and prorated for the exact amount of days you rent
+ </strong></pre>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="Img\DSLR\img3.jpg"style="width:297px;height:220px;">
+</td>
+<td>
+<h1>CANON BG-E20 BATTERY GRIP</h1>
+<pre><strong>
+ The Canon BG-E20 Battery Grip fits up to 2 compatible batteries and is ideal for those times when changing a battery is impossible. 
+ Original canon accessory.
+ The MRP of this item is Rs. 20,000 but you can get it for as little as :
+
+ Rs. 750 minimum rental up to 24 hours
+ Rs. 1,000 minimum rental up to 48 hours
+ Rs. 1,700 for a week
+ Rs. 4,000 for a month
+
+
+ Refundable deposit: Rs. 2,000 only. 
+ All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</pre></strong>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="Img\DSLR\img4.jpg"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>NIKON DSLR D5300</h1>
+<pre><strong>
+ Looking for a DSLR camera on rent in Mumbai? Meet Nikon's 'advanced beginner' DSLR, the D5300. 
+ It is ideal for almost any situation. With a perfect combination of stunning image quality, connectivity and creative control, 
+ step up your photography game to a whole new level.
+
+ What you get : 1) Camera , 2) Standard Lens , 3) 32GB Memory card , 4) Battery + Charger , 5) Carry Case
+
+ This camera with standard lens costs over Rs. 35,000/- and the extra zoom lens costs another Rs. 11,000/-. 
+ But you get the full kit for as little as:
+
+ Rs. 1,300 minimum rental up to 48 hours
+ Rs. 2,800 for a week
+ Rs. 5,300 for 2 weeks
+ Rs. 8,000 for a month
+
+
+ Refundable deposit: Rs. 3,000 only. 
+ All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</pre></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id ="GOPRO">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href="" onClick="return display('mainPage');">Home</a>>><a href="" onClick="return display('mainPage');">Travel And Cameras</a>>>GOPRO</td>
+		</tr>
+	</table>
+</div>
+
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="Img\GoPro\img1.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>GOPRO HERO5 BLACK</h1>
+<pre><strong>
+The best GoPro camera on rent in Mumbai, the Hero5 Black is GoPro's flagship camera! 
+Combining the best features of it's predecessors, this camera let's you record in 4k @ 30fps 
+and is also waterproof upto 10 metres without any housing. 
+It also boasts new features like it's voice commands, image stabilization and a 2 inch screen - a first for the GoPro Black models.
+What you get : 1) GoPro Hero5 Black, 2) Battery + Charging cable, 3) 64GB memory card, 4) Waterproof casing, 5) 8 mounts and 6) Carry pouches.
+The camera + mounts + memory card + casing + carry pouches costs over Rs. 52,000/- to purchase 
+but you can rent the GoPro camera in Mumbai for as little as:
+
+Rs. 1,400 minimum rental up to 48 hours
+Rs. 3,300 for a week
+Rs. 6,400 for 2 weeks
+Rs. 9,500 for a month
+
+Refundable deposit: Rs. 4,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</pre></strong></hr></td></tr>
+
+<tr>
+<td>
+<img src="Img\GoPro\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>GOPRO HERO4 BLACK</h1>
+<pre><strong>
+If you want a GoPro camera on rent in Mumbai, you've come to the right place. 
+This is the best action camera money can buy! Record videos in 4K at 30 frames per second. 
+Includes mounts so you can fix it on your car, bike, helmet or wear it on your head, chest or wrist. 
+Also comes with a waterproof case so you can use it even in the pool or at the beach!
+What you get : 1) GoPro Hero4 Black, 2) Battery + Charging cable, 3) 64GB memory card, 4) Waterproof casing, 5) 8 mounts, 6) Carry pouches
+Choose the GoPro Hero4 Black over the GoPro Hero4 Silver if you don't need a screen on the camera and want to shoot at higher frames per second.
+This camera with mounts costs over Rs. 52,000/-, including a memory card. But you can get the full kit for as little as:
+
+Rs. 1,300 minimum rental up to 48 hours
+Rs. 3,100 for a week
+Rs. 6,000 for 2 weeks
+Rs. 9,000 for a month
+
+
+Refundable deposit: Rs. 4,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</pre></strong></hr></td></tr></table>
+
+</div>
+
+<div id ="POLAROID">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href="" onClick="return display('mainPage');">Home</a>>><a href="" onClick="return display('mainPage');">Travel And Cameras</a>>>POLAROID</td>
+		</tr>
+	</table>
+</div>
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="Img\Polaroid\img1.jpg"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>FUJIFILM INSTAX WIDE 300 POLAROID CAMERA</h1>
+<pre><strong>
+Take your party to the next level with the Fujifilm Instax Wide 300 Polaroid Camera! 
+he only polaroid camera on rent in Mumbai with the widest film size (3.3" x 4.3"). 
+Get amazing picture quality and a retractable lens with two focus ranges. 
+With its automatic flash and its light/dark modes, using a Polaroid camera cannot become any easier and fun! 
+
+This camera along with the film costs over Rs. 8,000/-. But you can get the Polaroid camera for as little as :
+
+Rs. 800 minimum rental up to 24 hours
+Rs. 1,000 minimum rental up to 48 hours
+Rs. 1,400 for a week
+Rs. 2,400 for 2 weeks
+
+
+Refundable deposit: Rs. 1,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre><hr></td></tr></table>
+
+</div>
+
+<div id = "PROJECTORS">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href="" onClick="return display('mainPage');">Home</a>>><a href="" onClick="return display('mainPage');">AV AND MEDIA</a>>>PROJECTORS</td>
+		</tr>
+	</table>
+</div>
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="img\projectors\img1.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>BENQ HD HOME / OFFICE PROJECTOR (WITH OPTIONAL SCREEN)</h1>
+<pre><strong>
+Looking for a projector on rent in Mumbai? EazyLeazy has got you covered! 
+Now impress your boss at work, watch a movie or the game at home with full HD resolution and brightness of 3300 lumens.
+
+The BenQ MX525 + screen costs more than Rs. 40,000/- to purchase. But with EazyLeazy, you can rent this projector for:
+
+Rs. 1,100 minimum rental up to 24 hours
+Rs. 1,400 minimum rental up to 48 hours
+Rs. 2,800 for a week
+Rs. 5,300 for 2 weeks
+Rs. 8,100 for a month
+
+
+Refundable deposit: Rs. 3,500 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr>
+<tr>
+<td>
+<img src="img\projectors\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>BENQ MS524 PROJECTOR</h1>
+<pre><strong>
+Want a great quality yet low cost business projector on rent in Mumbai?
+With the BenQ MS524 projector, turn any content into a large screen experience. 
+Now impress your boss at work, watch a movie or the game at home with a brightness of 3200 ANSI lumens and a SVGA (800 x 600) Native Resolution.
+
+The BenQ MS524 projector + screen costs Rs. 30,000 to purchase. But you can get it for as little as:
+
+Rs. 700 minimum rental up to 24 hours
+Rs. 800 minimum rental up to 48 hours
+Rs. 1,400 for a week
+Rs. 2,000 for 2 weeks
+Rs. 3,000 for a month
+
+
+Refundable deposit: Rs. 2,500 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr></table>
+</div>
+
+<div id = "SPEAKERS">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href="" onClick="return display('mainPage');">Home</a>>><a href=""onClick="return display('mainPage');">AV AND MEDIA</a>>>SPEAKERS</td>
+		</tr>
+	</table>
+</div>
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="img\speaker\img1.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>SONY HI-FI PARTY TOWER</h1>
+<pre><strong>
+Host the ultimate house party with the Sony Hi-Fi Party Tower Speakers. 
+With multiple modes of connection and a sleek design, this is one of the best speakers on rent in Mumbai.
+The LED lights just add to the overall party vibe.
+
+The Sony tower costs over Rs. 30,000 to purchase. But you can get it for as little as:
+
+Rs. 1,700 minimum rental up to 48 hours
+Rs. 2,800 for a week
+Rs. 4,850 for 2 weeks
+Rs. 7,000 for a month
+
+
+Refundable deposit: Rs. 3,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr>
+<tr>
+<td>
+<img src="img\speaker\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>SONY HI-FI AUDIO SYSTEM</h1>
+<pre><strong>
+Ever needed speakers for a house party and didn't know where to go? Look no more. 
+The sony Hi-Fi Audio system is one of the best party speakers on rent in Mumbai! 
+With a sleek and stylish design and multiple modes of connection, this is the perfect party speaker.
+
+The Sony Hi-Fi Audio System costs over Rs. 25,000/- to purchase. But you can get it for as little as:
+
+Rs. 1,700 minimum rental up to 48 hours
+Rs. 2,800 for a week
+Rs. 4,850 for 2 weeks
+Rs. 7,000 for a month
+
+
+Refundable deposit: Rs. 3,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr>
+<tr>
+<td>
+<img src="img\speaker\img3.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>FUGOO PORTABLE WATERPROOF SPEAKER</h1>
+<pre><strong>
+The mother of all portable speakers..! The Fugoo Sport XL is the ultimate waterproof Bluetooth speaker. 
+It has two different sound modes: "Normal" and "Outdoor" which produces a 97db sound pressure level 
+and can fill up large rooms and outdoor adventures with rich immersive audio. 
+So next time you want to rent speakers for a party by the poolside, take the Fugoo Sport XL along!
+
+This speaker costs over Rs. 36,000/-, and is not available in India. Get it for as little as:
+
+Rs. 1,300 minimum rental up to 48 hours
+Rs. 2,500 for a week
+
+
+Refundable deposit: Rs. 3,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr></table>
+</div>
+
+<div id = "BOARDGAME">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href=""onClick="return display('mainPage');">Home</a>>><a href=""onClick="return display('mainPage');">PARTY AND GAMES</a>>>BOARD GAMES</td>
+		</tr>
+	</table>
+</div>
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="img\boardgames\img1.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>BOARD AND CARD GAMES SET</h1>
+<pre><strong>
+Never be bored with board games!...Bored at home and got nothing to do? 
+Having another get together with friends but tired of doing the same old watch TV routine?
+Now relive childhood memories with a fun modern twist! 
+Don't bother buying a bunch of games to use once in a blue moon when you can now get it on rent any time you want!
+
+The set includes 5 games (you can select from our range of games including : 
+Monopoly - Electronic and Original Editions, Scattergories, Twister, Pictionary, Scrabble, Jenga and Taboo). 
+Plus we'll send you Uno, Monopoly Deal and 2 packs of regular playing cards for free!
+
+This set games costs over INR 10,000/- to purchase. But you can get 5 games of your choice + Uno + Monopoly deal for as little as:
+
+Rs. 900 minimum rental up to 48 hours
+Rs. 1,600 for a week
+
+
+Refundable deposit: Rs. 1,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr>
+<tr>
+<td>
+<img src="img\boardgames\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>CARDS AGAINST HUMANITY GAMES KIT</h1>
+<pre><strong>
+Never be bored with board games!...Try out premium games kit which comes with the latest craze - Card's Against Humanity!
+
+The set also includes any 2 additional games (you can select from our range of games including : 
+Monopoly - Electronic and Original Editions, Scattergories, Twister, Pictionary, Scrabble, Jenga and Taboo). 
+Plus we'll send you Uno, Monopoly Deal and 2 packs of regular playing cards for free!
+
+This set games costs over INR 13,000/- to purchase. But you can get Cards Against Humanity + 2 games of your choice + Uno + Monopoly deal for as little as:
+
+Rs. 700 minimum rental up to 48 hours
+Rs. 1,500 for a week
+
+
+Refundable deposit: Rs. 1,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr></table>
+</div>
+
+<div id = "KARAOKE">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href=""onClick="return display('mainPage');">Home</a>>><a href=""onClick="return display('mainPage');">PARTY AND GAMES</a>>>KARAOKE</td>
+		</tr>
+	</table>
+</div>
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="img\karoke\img1.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>KARAOKE MACHINE</h1>
+<pre><strong>
+Always wanted to go for karaoke night at a bar or restaurant but too shy to sing in front of strangers? 
+EazyLeazy beings you the best karaoke system on rent in Mumbai, With over 1,500 english and 2,000 hindi songs, 
+this machine is so small and compact, you can take it with you no matter where you go! 
+
+Have a great time at your next house party or outing with this awesome, lightweight and advanced karaoke machine. 
+Go crazy singing along to golden oldies or the latest party songs all from the privacy of your own home.
+
+What you get : 1) Karaoke Machine, 2) 2 wireless mics, 3) HDMI Cable, 4) AV Cable 5) Carry Case and accessories
+
+The machine costs over INR 29,000/- to purchase. But you can get this for as little as:
+
+Rs. 1,200 minimum rental up to 48 hours
+Rs. 2,300 for a week
+
+
+Refundable deposit: Rs. 2,500 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr>
+<tr>
+<td>
+<img src="img\karoke\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>ULTIMATE KARAOKE PARTY PACK (WITH SPEAKERS AND PROJECTOR)</h1>
+<pre><strong>
+Always wanted to go for karaoke night at a bar or restaurant but too shy to sing in front of strangers? 
+We have a solution for you... Now have a karaoke party in the comfort of your home!
+
+Have a great time at your next house party or outing with this awesome, lightweight and advanced karaoke machine. 
+Go crazy singing along to golden oldies or the latest party songs all from the privacy of your own home.
+
+Get two wireless mikes, HD quality video+ sound and songs in English (1500+ songs), Hindi (2000 songs), Punjabi, Gujarati and many more languages! 
+See available songs here! 
+
+Go all the way with a BenQ HD projector (with 100 inch screen) and Sony Tower Speakers to complete the experience!
+
+This kit costs over Rs. 95,000/- to purchase. You can get the karaoke, projector and speakers for as little as:
+
+Rs. 4,000 minimum rental up to 48 hours
+Rs. 7,000 for a week
+
+
+Refundable deposit: Rs. 4,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></td></tr></table>
+<h1></h1>
+<pre><strong></strong></pre>
+
+</div>
+
+<div id = "HOVERBOARD">
+<div class="navbar">
+	<table width = "100%">
+		<tr>
+			<td> <a href=""onClick="return display('mainPage');">Home</a>>><a href=""onClick="return display('mainPage');">HOVERBOARD</a>>>HOVERBOARD</td>
+		</tr>
+	</table>
+</div>
+
+<table class = "product-content" width = "100%">
+<tr>
+<td>
+<img src="Img\hoverboard\img1.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>HOVERBOARD</h1>
+<pre><strong>
+The coolest toy available in the market...This funky electronic skatebaord will hover you around at almost 15 km/h. 
+To add to its cool quotient it also has
+
+- Trippy blue LED lights
+
+- An efficient rechargeable lithium battery from Samsung, which charges in 2 hours and gives you many hours of use
+
+- Can take upto 100 kgs of load and still glide around smoothly
+
+Cautionary Note: Just like riding a bicycle or skate boarding or roller blading the hoverboard works on the simple principle of balance. 
+So its going to require some amount of patience and practise before you can glide around like a pro. 
+Also please put on the safety gear provided to ensure safety. EazyLeazy will not assume responsibility for any accident/injury caused. 
+
+This hoverboard costs over Rs. 27,000. But you can get the hoverboard for as little as:
+
+Rs. 1,450 minimum rental up to 48 hours
+Rs. 3,100 for a week
+
+
+Refundable deposit: Rs. 3,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre><hr></td></tr>
+<tr>
+<td>
+<img src="Img\hoverboard\img2.png"style="width:304px;height:228px;">
+</td>
+<td>
+<h1>IO DRIFT BY LIVELLO</h1>
+<pre><strong>
+The original patented driftboard from IO... Zip around on the original hoverboard at 10
+ km/h. To add to its cool quotient it also has
+
+- Trippy blue LED lights
+
+- An efficient rechargeable lithium battery from Samsung, which charges in 2 hours and gives you 15-20Kms of use
+
+- Can take upto 100 kgs of load and still glide around smoothly
+
+Watch a cool video on the IO Hawk here.
+
+Cautionary Note: Just like riding a bicycle or skate boarding or roller blading the hoverboard works on the simple principle of balance. 
+So its going to require some amount of patience and practise before you can glide around like a pro. 
+Also please put on the safety gear provided to ensure safety. EazyLeazy will not assume responsibility for any accident/injury caused. 
+
+The IO Hawk costs over Rs. 40,000. But you can get the hoverboard for as little as:
+
+Rs. 1,800 minimum rental up to 48 hours
+Rs. 4,100 for a week
+
+
+Refundable deposit: Rs. 4,000 only. 
+All prices are inclusive of delivery and prorated for the exact amount of days you rent
+</strong></pre></hr></td></tr></table>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+function display(div_id){
+			var id = div_id;
+			hideAllDiv();
+			document.getElementById(id).style.display = "block";		
+			
+			return false;
+		}	
+
+function hideAllDiv(){
+			document.getElementById('mainPage').style.display = "none";	
+			document.getElementById('DSLR').style.display = "none";
+			document.getElementById('GOPRO').style.display = "none";
+			document.getElementById('POLAROID').style.display = "none";
+			document.getElementById('PROJECTORS').style.display = "none";
+			document.getElementById('SPEAKERS').style.display = "none";
+			document.getElementById('BOARDGAME').style.display = "none";
+			document.getElementById('KARAOKE').style.display = "none";
+			document.getElementById('HOVERBOARD').style.display = "none";
+}	
+
+window.onload = function () {
+   hideAllDiv();
+   document.getElementById('mainPage').style.display = "block";	
+}	
+		
+</script>
+
+
+</body>
+
+<html>

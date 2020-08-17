@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('input:checkbox').click(function() {
+        $('input:checkbox').not(this).prop('checked', false);
+    });
+});
+function check_Alpha(letters){
+    var regexName = /^[a-zA-Z]+$/;
+    var regexPhone = /^[0-9]/;
+    var regexEmail = /^(([\-\w]+)\.?)+@(([\-\w]+)\.?)+\.[a-zA-Z]{2,4}$/;
+    if(regexName.test(letters.fname.value) == false || regexName.test(letters.lname.value)==false ){
+        alert("Name must be in alphabets only");
+        letters.fname.focus();
+        return false;
+    }
+    if(letters.fname.value == " " || letters.lname.value == " "){
+        alert("Name Field cannot be left empty");
+        letters.fname.focus();
+        return false;
+    }
+    if(regexEmail.test(letters.email.value) == false){
+        alert("Enter valid email id");
+        letters.email.focus();
+        return false;
+    }
+    if(letters.email.value == " "){
+        alert("Email Field cannot be left empty");
+        letters.email.focus();
+        return false;
+    }
+    if(regexPhone.test(letters.pno.value) == false || letters.pno.value.length!=10 ){
+        alert("Enter valid phone number");
+        letters.pno.focus();
+        return false;
+    }
+    if(letters.pno.value == " "){
+        alert("Phone No. Field cannot be left empty");
+        letters.pno.focus();
+        return false;
+    } 
+    if((letters.checky.checked == true && letters.checkn.checked == false) || (letters.checkn.checked == true && letters.checky.checked == false)){
+    }
+        else{
+            alert("One Checkbox should be checked.");
+        letters.pno.focus();
+        return false;
+        }
+    return true;
+  }
+function myFunction() { 
+      //var elements = document.getElementById("feedback").elements;
+      document.write("***********************&nbspDetails&nbsp*******************<br><br>Name: "+document.getElementById("fn").value +" " +document.getElementById("ln").value+ " <br><br>Phone No: " + document.getElementById("pno").value+" <br><br>E-mail: " + document.getElementById("email").value+" <br><br> Suggestion: " + document.getElementById("suggest").value);
+  }
+//  myFunction();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+	.card{
+		background: #d9dbdbd6;
+		border-radius: 5px;
+		width: 420px;
+		height: fill-content;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+	.body{
+
+		background: url(feedB.jpg);
+		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	h2,h4,h3{
+		font-family: 'Roboto', sans-serif;
+	}
+	.btn{
+		text-align:center;
+	}
+	.btn button{
+		background: #194ce4;
+		 color: white;
+		 padding: 8px;
+		 padding-left: 30px;
+		 padding-right: 30px;
+		 border-radius: 20px;
+		 font-size: 20px;
+		  border: none;
+	}
+	button:hover{
+		cursor: pointer;
+		background: #1bae13;
+	}
+	.t{
+		font-family: 'Roboto',sans-serif;
+	}
+</style>
+<head>
+	<title>Feedback</title>
+</head>
+<body class="body">
+	<center>
+		<div class="card">
+			<!--<form action="#" method="post" name="feedback" >
+			-->		<div >
+    					<ul style="list-style-type: none; margin-left: -21px;">
+							<li  class="">
+								<br>
+							  <div >
+							      <h2>
+							        Rate Our Website!
+							      </h2>
+							      <div class="t">
+							        Please let us know your experience with our website
+							      </div>
+							  </div>
+							</li>
+      						<li>
+      							<h4 >Full Name
+      							<div style="margin-top: 10px;">
+      							    <div>
+      							     <span  style="vertical-align:top">
+      							        <input type="text" size="15" value="" name="fname" placeholder="First Name" style="padding: 5px;" id ="fn" required />
+ 	     						    </span>
+    				        		<span style="vertical-align:top">
+     					        		<input type="text" style="padding: 5px;" id="ln" size="15" name="lname" value="" placeholder="Last Name"/>
+ 			    			       	</span>
+     					     		</div>
+     			  	 			</div></h4>
+     			 			</li>
+                <li>
+                    <h4 >Phone No: 
+                    <div style="margin-top: 10px;">
+                        <div>
+                         <span  style="vertical-align:top">
+                            <input type="text" size="15" value="" id="pno" placeholder="XXXXX-XXXXX" style="padding: 5px;" required />
+                      </span>
+                      </div>
+                    </div></h4>
+                </li>
+     			 			<li >
+    			 			   <h4>E-mail
+    			 			   <div style="margin-top: 10px;">
+    			 			     <input type="email" size="37" style="padding: 5px;" id= "email" value="" placeholder="ex: myname@example.com" required />
+    			    			</div></h4>
+    			  			</li>
+    			  			<li>
+    			    			<h4> Please rate my site: 
+    			    			<div>
+    			    				<br>
+    			      				<table cellPadding="4" cellSpacing="0">
+				    			        <tbody>
+				    			          <tr>
+				    			            <th>
+    			               
+				    			            </th>
+				    			            <th style="text-align:center">
+				    			             1
+				    			            </th>
+				    			            <th style="text-align:center">
+				    			             2
+    							            </th>
+                							<th style="text-align:center">
+               				   					3
+                							</th>
+                							<th style="text-align:center">
+                				  				4
+                							</th>
+                							<th style="text-align:center">
+                							 5
+                							</th>
+                							<th></th>
+              							</tr>
+    							        <tr>
+                							<td>
+      								            <label > Not Bad </label>
+                							</td>
+               								 <td style="text-align:center">
+                							  <input type="radio" value="1" name="rate" />
+                							</td>
+                							<td style="text-align:center">
+                							  <input type="radio" value="2" name="rate"/>
+                							</td>
+                							<td style="text-align:center">
+                							  <input type="radio" value="3" name="rate"/>
+                							</td>
+                							<td style="text-align:center">
+                							  <input type="radio" value="4" name="rate"/>
+                							</td>
+                							<td style="text-align:center">
+                							  <input type="radio" value="5" name="rate" />
+                							</td>
+                							<td>
+                  								<label > Excellent </label>
+                							</td>
+              							</tr>
+            						</tbody>
+          						</table>
+        					</div></h4>
+      					</li>
+      					<li>
+      						<div>
+      							<h4>Would you suggest it to anyone?&nbsp;&nbsp;
+      							<input type="checkbox" name="checky" /> Yes &nbsp;&nbsp;&nbsp;
+      							<input type="checkbox" name="checkn" /> No
+      							</h4>
+      						</div>
+      					</li>
+      					<li >
+    					    <h4> How would you suggest we improve it?
+    					    <div >
+    					    	<br>
+    					      <textarea cols="35" rows="6" id="suggest"></textarea>
+        					</div>
+    					  </li></h4>
+    					  <li >
+    					    <div>
+    					      <div class="btn">
+    					        <button onclick="myFunction()">
+              						Submit
+    						    </button>
+    						    </div>
+   						     </div>
+   						     <br>
+    						  </li>
+    					</ul>
+  					</div>
+				</form>
+		</div>
+	</center>
+</body>
+</html>

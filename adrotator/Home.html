@@ -1,0 +1,41 @@
+<%@language="vbscript"%>
+<%
+dim obj
+Set obj=Server.CreateObject("MSWC.AdRotator")
+%>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<table width="1210"  border="0" cellpadding="1" cellspacing="1" >
+<tr valign="top">
+<td align=center colspan="2">
+    <center><img src="images\logo.png" style="float:center;height:125px;"></center>
+</td>
+</tr>
+<tr width="100%" valign="top">
+    <td width="20%" >
+        <div class="btn-group" style="float:left;">
+          <a href="Home.html"><button class="button">Home</button></a>
+          <a href="pen.html"><button class="button">Pen</button></a>
+          <a href="Books.html"><button class="button">Books</button></a>
+          <a href="Pencil.html"><button class="button">Pencil</button></a>
+          <a href="Eraser.html"><button class="button">Eraser</button></a>
+          <a href="Crayons.html"><button class="button">Crayons</button></a>
+          <a href="Ruler.html"><button class="button">Rulers</button></a>
+          <a href="Glue.html"><button class="button">Glue</button></a>
+          <a href="Feedback.html"><button class="button">Feedback</button></a>
+        </div>
+    </td>
+    <td width="80%" valign="top">
+        <br /><img src="images\Home1.jpg" style="float:left;width:820px;height:600px;">
+    </td>
+	<td>
+		<%=obj.GetAdvertisement("ScheduleFile.txt")%>
+</tr>
+
+</table>
+</body>
+</html>

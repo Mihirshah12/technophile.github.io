@@ -1,0 +1,9 @@
+Redirect AdRedirect.asp
+WIDTH 450
+HEIGHT 60
+BORDER 1
+*
+Books.jpg
+hello.html
+qwertyu
+20
